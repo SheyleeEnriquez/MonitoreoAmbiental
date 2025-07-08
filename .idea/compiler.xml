@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ms-api-gateway" />
+        <module name="ms-eureka-server" />
+      </profile>
+      <profile name="Annotation profile for ms-notifications" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
+        <module name="ms-sensor-data-collector" />
+        <module name="ms-notifications" />
+        <module name="ms-environmental-analyzer" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ms-api-gateway" options="-parameters" />
+      <module name="ms-environmental-analyzer" options="-parameters" />
+      <module name="ms-eureka-server" options="-parameters" />
+      <module name="ms-notifications" options="-parameters" />
+      <module name="ms-sensor-data-collector" options="-parameters" />
+    </option>
+  </component>
+</project>
